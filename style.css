@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.65;
+  /* font-size: clamp(1rem, 0.625rem + 1.5vw, 1.25rem); */
+  font-display: swap;
+  font-family: "Inter", "Lexend Deca", sans-serif;
+  background: hsl(233, 47%, 7%);
+}
+
+body {
+  font-size: 15px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  margin: 4rem auto;
+  width: 100%;
+}
+
+.image {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+  height: 16rem;
+  background:
+    linear-gradient(hsla(277, 64%, 61%, 0.6), hsla(277, 64%, 61%, 0.6)),
+    url(./images/image-header-mobile.jpg) center / cover;
+  overflow: hidden;
+}
+
+.content {
+  background: hsl(228, 45%, 44%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 2rem;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
