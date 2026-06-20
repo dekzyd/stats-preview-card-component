@@ -17,7 +17,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem;
 }
 
 img {
@@ -28,7 +27,7 @@ img {
 
 .card {
   margin: 4rem auto;
-  width: 100%;
+  width: min(100% - 2rem, 70rem);
 }
 
 .image {
@@ -79,6 +78,8 @@ img {
 
 .item .heading {
   color: hsla(0, 0%, 100%, 0.6);
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
 }
 
 .attribution {
@@ -87,4 +88,45 @@ img {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  main {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .image,
+  .content {
+    width: 50%;
+  }
+
+  .image {
+    border-radius: 0 0.5rem 0.5rem 0;
+    height: auto;
+  }
+
+  .content {
+    border-radius: 0.5rem 0 0 0.5rem;
+    text-align: left;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
 }
