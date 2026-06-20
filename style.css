@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -17,6 +19,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0.5rem;
 }
 
 img {
@@ -49,12 +52,18 @@ img {
   color: hsl(0, 0%, 100%);
   text-align: center;
   border-radius: 0 0 0.5rem 0.5rem;
-  padding: 2rem;
+  padding: 2rem 2rem;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 1rem;
 }
 
 .title-description {
   line-height: 1.65;
   color: hsla(0, 0%, 100%, 0.75);
+  letter-spacing: 0.02rem;
 }
 
 .stats {
@@ -89,17 +98,22 @@ img {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+.wrapper {
+  border: 1px solid hsl(228, 45%, 44%);
+}
 
 /* Tablet */
 @media (min-width: 768px) {
   main {
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
   }
 
   .card {
     display: flex;
     flex-direction: row-reverse;
+    height: 40vh;
   }
 
   .image,
@@ -115,16 +129,48 @@ img {
   .content {
     border-radius: 0.5rem 0 0 0.5rem;
     text-align: left;
+    height: 100%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .stats {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .title {
+    font-size: clamp(1rem, 0.825rem + 1.5vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .title-description {
+    font-size: clamp(0.4rem, 0.1rem + 1.5vw, 0.875rem);
+  }
+
+  /* .item .stat {
+    font-size: clamp(1rem, 0.825rem + 1.5vw, 2.5rem);
+  }
+  .item .heading {
+    font-size: clamp(0.4rem, 0.1rem + 1.5vw, 0.875rem);
+  } */
 }
 
 /* Laptop */
 @media (min-width: 1024px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .wrapper {
+    width: 60%;
+    height: 80%;
+  }
 }
 
 /* Desktop */
