@@ -7,10 +7,10 @@
 }
 
 html {
-  /* font-size: clamp(1rem, 0.625rem + 1.5vw, 1.25rem); */
   font-display: swap;
   font-family: "Inter", "Lexend Deca", sans-serif;
   background: hsl(233, 47%, 7%);
+  color: #fff;
 }
 
 main {
@@ -56,6 +56,12 @@ img {
   width: 100%;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .title {
   margin-bottom: 1rem;
 }
@@ -94,15 +100,12 @@ img {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-.wrapper {
-  /* border: 1px solid hsl(228, 45%, 44%); */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 /* Tablet */
