@@ -15,7 +15,6 @@ html {
 
 main {
   line-height: 1.3;
-  font-size: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,20 +22,20 @@ main {
 }
 
 img {
-  height: 100%;
-  width: 100%;
+  block-size: 100%;
+  inline-size: 100%;
   object-fit: cover;
 }
 
 .card {
   margin: 4rem auto;
-  width: min(100% - 2rem, 70rem);
+  inline-size: min(100% - 2rem, 70rem);
 }
 
 .image {
   border-radius: 0.5rem 0.5rem 0 0;
-  width: 100%;
-  height: 16rem;
+  inline-size: 100%;
+  block-size: 16rem;
   background:
     linear-gradient(hsla(277, 80%, 37%, 0.6), hsla(277, 68%, 38%, 0.6)),
     url(./images/image-header-mobile.jpg) center / cover;
@@ -53,17 +52,20 @@ img {
   text-align: center;
   border-radius: 0 0 0.5rem 0.5rem;
   padding: 2rem 2rem;
-  width: 100%;
+  inline-size: 100%;
+  border: 1px dashed red;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px dashed green;
+  /* background: #fff; */
 }
 
 .title {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 .title-description {
@@ -76,7 +78,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
-  margin-top: 2rem;
+  margin-block-start: 2rem;
 }
 
 .item {
@@ -109,7 +111,7 @@ img {
 }
 
 /* Tablet */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   main {
     justify-content: center;
     align-items: center;
@@ -119,28 +121,32 @@ img {
   .card {
     display: flex;
     flex-direction: row-reverse;
-    height: 40vh;
+    block-size: 40vh;
   }
 
   .image,
   .content {
-    width: 50%;
+    inline-size: 50%;
   }
 
   .image {
     border-radius: 0 0.5rem 0.5rem 0;
-    height: auto;
+    block-size: auto;
   }
 
   .content {
     border-radius: 0.5rem 0 0 0.5rem;
-    text-align: left;
-    height: 100%;
+    text-align: start;
+    block-size: 100%;
     padding: 2rem;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .wrapper {
+    flex: 1;
   }
 
   .stats {
@@ -150,7 +156,7 @@ img {
 
   .title {
     font-size: clamp(1rem, 0.825rem + 1.5vw, 2.5rem);
-    margin-bottom: 1rem;
+    margin-block-end: 1rem;
   }
 
   .title-description {
@@ -159,7 +165,7 @@ img {
 }
 
 /* Laptop */
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .content {
     display: flex;
     justify-content: center;
@@ -167,13 +173,13 @@ img {
     padding: 0;
   }
   .wrapper {
-    width: 75%;
-    height: 80%;
+    inline-size: 75%;
+    block-size: 80%;
   }
 
   .title {
     font-size: clamp(0.8rem, 0.625rem + 1.5vw, 2.3rem);
-    margin-bottom: 0.6rem;
+    margin-block-end: 0.6rem;
   }
 
   .title-description {
@@ -189,10 +195,10 @@ img {
 }
 
 /* Desktop */
-@media (min-width: 1440px) {
+@media (min-width: 90rem) {
   .wrapper {
-    width: 70%;
-    height: 70%;
+    inline-size: 70%;
+    block-size: 70%;
   }
   .title-description {
     font-size: clamp(0.4rem, 0.2rem + 1.5vw, 1rem);
