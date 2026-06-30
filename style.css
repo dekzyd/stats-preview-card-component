@@ -54,6 +54,10 @@ img {
   padding: 2rem 2rem;
   inline-size: 100%;
   border: 1px dashed red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -138,15 +142,13 @@ img {
     border-radius: 0.5rem 0 0 0.5rem;
     text-align: start;
     block-size: 100%;
-    padding: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding-inline: 3.25rem;
   }
 
   .wrapper {
     flex: 1;
+    inline-size: 50%;
+    block-size: 80%;
   }
 
   .stats {
@@ -167,14 +169,7 @@ img {
 /* Laptop */
 @media (min-width: 64rem) {
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-  .wrapper {
-    inline-size: 75%;
-    block-size: 80%;
+    padding-inline: 4rem;
   }
 
   .title {
@@ -196,10 +191,6 @@ img {
 
 /* Desktop */
 @media (min-width: 90rem) {
-  .wrapper {
-    inline-size: 70%;
-    block-size: 70%;
-  }
   .title-description {
     font-size: clamp(0.4rem, 0.2rem + 1.5vw, 1rem);
   }
